@@ -7,7 +7,9 @@ nslookup merupakan sebuah perintah atau alat yang digunakan untuk memperoleh ser
 ## Langkah - Langkah percobaan
 1. Jalankan Command Prompt (cmd) pada perangkat yang digunakan, kemudian masukkan perintah "nslookup www.mit.edu
 " dan tekan ENTER. Perintah ini digunakan untuk mengetahui alamat IP dari domain tersebut.
-![tampilan](../Praktikum-Jarkom/assets/image/nslookup.png)
+<img width="720" height="564" alt="nslookup" src="https://github.com/user-attachments/assets/7fbc125f-f295-4ef4-8744-acdfa2bb108c" />
+
+
 
 2. Buka Command Prompt (cmd), lalu ketik perintah "nslookup -type=NS mit.edu" dan tekan ENTER. Perintah ini digunakan untuk menampilkan daftar Name Server (NS) yang menangani domain tersebut.
 ![tampilan](../Praktikum-Jarkom/assets/image/nslookup%20type%20NS.png)
