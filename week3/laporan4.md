@@ -15,7 +15,7 @@ nslookup merupakan sebuah perintah atau alat yang digunakan untuk memperoleh ser
 3. Buka Command Prompt (cmd), kemudian ketik perintah "nslookup www.aiit.or.kr
  bitsy.mit.edu" dan tekan ENTER. Perintah ini digunakan untuk meminta informasi alamat IP domain www.aiit.or.kr
  dengan menggunakan server DNS bitsy.mit.edu sebagai sumber pencarian.
-![tampilan](../Praktikum-Jarkom/assets/image/nslookup%20aiit%20bitsy.png)
+![tampilan aiit](../assets/image/nslookup%20aiit%20bitsy.png)
 
 ## Pertanyaan
 1. Mencari IP server web di Asia
@@ -26,9 +26,11 @@ Alamat IP : 210.152.243.234
 
 2. Mencari DNS otoritatif universitas di Eropa
 Perintah : nslookup -type=NS cam.ac.uk 
-
+![tampilan nslookup cam.ac.uk](../assets/image/nslookup%20cam.uk.png)
 
 3. Mencari mail server Yahoo melalui DNS tertentu
+Perintah : nslookup -type=MX gmail.com dns0.cam.ac.uk
+![tampilan nslookup gmail](../assets/image/nslookup%20gmail.png)
 
 
 # Modul 4.3 Ipconfig
@@ -55,4 +57,40 @@ Mempelajari cara memantau serta menganalisis paket data DNS yang dikirim dan dit
 # A. Analisis DNS Request dan Response pada Akses Website (www.ietf.org)
 
 ## Langkah - Langkah Percobaan
-1. Buka cmd lalu ketik "IPCONFIG" untuk melihat IP lalu copy IP pada laptop masing-masing (10.218.11.201). lalu buka wireshark
+1. Buka cmd lalu ketik "IPCONFIG" untuk melihat IP lalu copy IP pada laptop masing-masing (192.168.56.1). lalu buka wireshark
+![tampilan ipconfig untuk melihat IP pada laptop](../assets/image/ipconfig.png)
+
+2. Setelah buka wireshark pilih jaringan yang digunakan (saya menggunakan wifi). Setelah memilih wifi click bagian filter lalu ketik ip.addr == 192.168.56.1 (sesuai hasil di cmd)
+![tampilan wireshark](../assets/image/TampilanWiresharkaddrip.png)
+
+3. Buka browser http://www.ietf.org/
+![tampilan IETF](../assets/image/IETF.png)
+
+4. Tambahkan filter lagi ip.addr == 10.218.11.201 && dns.qry.name contains "ietf" 
+![tampilan wiresharkietf](../assets/image/Tampilanwiresharkietf.png)
+
+## Pertanyaan
+1. Apakah DNS menggunakan UDP atau TCP?
+![tampilan pertanyaan 1](../assets/image/jawabanpertanyaan1.png)
+
+Dari percobaan yang di lakukan terilhat bahwa DNS menggunakan UDP
+
+2. Port tujuan pada DNS request & port sumber pada DNS response
+![tampilan pertanyaan](../assets/image/jawabanpertanyaan1.png)
+DNS request = Source Port (client): 53050 & Destination Port (server): 53
+DNS RESPONSE = Source Port (server): 53 & Destination Port (client): 53050
+
+# B. Analisis DNS Menggunakan Perintah nslookup (www.mit.edu)
+
+## Langkah - Langkah percobaan
+1. Buka CMD ketikan perintah nslookup www.mit.edu
+![tampilan cmd www mit edu](../assets/image/nslookup%20www%20mit%20edu.png)
+
+2. Buka wireshark lalu pilih jaringan yang digunakan, setelah itu pada bagian filter ketik DNS 
+![tampilan dns](../assets/image/dns.png)
+
+
+## Pertanyaan
+ 1. Port tujuan request dan port sumber dari response
+
+- DNS request = destination: 53
