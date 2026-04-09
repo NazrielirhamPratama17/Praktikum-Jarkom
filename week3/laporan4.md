@@ -113,3 +113,46 @@ Pesan ini tidak mengandung jawaban karena masih berupa permintaan (query) untuk 
 
 ## Langkah - Langkah Percobaan
 1. Buka CMD ketikan perintah nslookup -type=NS mit.edu
+![tampilan mit edu](../assets/image/nslookup%20mit.edu.png)
+
+2. Buka Wireshark lalu pilih wifi, setelah itu pada bagian filter ketik dns untuk memunculkan bagian dns saja
+![tampilan wireshark mit edu](../assets/image/WireShark%20mit.edu.png)
+
+3. Ambil data dari Standard query (request) dan Standard query response dari NS mit.edu
+![tampilan wireshark mit edu](../assets/image/WireShark%20mit.edu.png)
+
+## Pertanyaan 
+1. Alamat IP request
+![tampilan ip](../assets/image/pertanyaan%20analisis%20dns%201.png)
+
+2. Type dan answers request
+![tampilan ip](../assets/image/pertanyaan%202%20analisis%20dns.png)
+
+Pada percobaan bisa terlihat bahwa Type request dari DNS adalah NS yang artinya tidak mengandung jawaban karena hanya permintaan
+
+3. Answer Response
+![tampilan ip](../assets/image/pertanyaan%203%20analisis%20dns.png)
+
+# D. Analisis DNS Menggunakan Server Tertentu (www.aiit.or.kr bitsy.mit.edu)
+
+## Langkah - Langkah Percobaan
+1. Buka CMD ketikan nslookup www.aiit.or.kr bitsy.mit.edu
+![tampilan ip](../assets/image/Analisis%20DNS%20Menggunakan%20Server%20Tertentu.png)
+
+2. Buka Wireshark lalu pilih wifi, setelah itu pada bagian filter ketik dns untuk memunculkan bagian dns saja
+![tampilan ip](../assets/image/aiit%20server%20tertentu.png)
+
+3. Ambil data dari Standard query (request) dari www.aiit.or.kr
+![tampilan ip](../assets/image/aiit%20server%20tertentu%202.png)
+
+## Pertanyaan
+1. Alamat IP request
+![tampilan ip](../assets/image/pertanyaan%20server%20tertentu%201.png)
+
+2. Type dan answers request
+![tampilan ip](../assets/image/pertanyaan%202%20server%20tertentu.png)
+
+Tipe DNS request adalah A (Address Record). Pesan ini tidak mengandung jawaban karena hanya berupa permintaan
+
+3. Answers response Berdasarkan hasil pada Command Prompt, terlihat bahwa terjadi “DNS request timed out”, yang menunjukkan bahwa server DNS tidak merespon permintaan yang dikirimkan
+![tampilan ip](../assets/image/pertanyaan%203%20server%20tertentu.png)
