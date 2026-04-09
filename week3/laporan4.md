@@ -94,3 +94,22 @@ DNS RESPONSE = Source Port (server): 53 & Destination Port (client): 53050
  1. Port tujuan request dan port sumber dari response
 
 - DNS request = destination: 53
+![tampilan request](../assets/image/request.png)
+
+- DNS response = Source: 53
+![tampilan response](../assets/image/response.png)
+
+2. Alamat IP request
+![tampilan mit edu wireshark](../assets/image/www%20mit%20edu.png)
+
+3. Type dan answer request
+![tampillan type dan answer](../assets/image/type%20dan%20answer.png)
+
+Pada percobaan yang dilakukan, terlihat bahwa type yang muncul adalah AAAA (IPv6 Address record) yang berfungsi untuk mencari alamat IPv6 dari suatu domain.
+Pada paket nomor 13053, sumber 10.39.2.48 mengirimkan permintaan ke 10.39.2.148 dengan query AAAA www.google.com.
+Pesan ini tidak mengandung jawaban karena masih berupa permintaan (query) untuk mencari alamat IPv6 dari domain www.google.com.
+
+# C. Analisis DNS Record NS Menggunakan nslookup (mit.edu)
+
+## Langkah - Langkah Percobaan
+1. Buka CMD ketikan perintah nslookup -type=NS mit.edu
