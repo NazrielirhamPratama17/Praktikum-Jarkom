@@ -83,7 +83,7 @@ while running:
     connectionSocket.close() # tutup koneksi dengan client
     serverSocket.close() # tutup socket server
 
-    ![tampilan](../assets/image/server-client.png)
+![tampilan](../assets/image/server-client.png)
 
 1. Jalankan program server terlebih dahulu lewat terminal
 2. Server akan berada dalam kondisi siap dan menunggu permintaan koneksi
@@ -185,9 +185,7 @@ finally:
     serverSocket.close()
     sys.exit(0)
 
-    ![tampilan](../assets/image/udp-server-client.png)
-
-    Berikut versi yang sudah diparafrase agar berbeda:
+![tampilan](../assets/image/udp-server-client.png)
 
 1. Program server dijalankan terlebih dahulu
 2. Client kemudian mengirimkan pesan ke server
