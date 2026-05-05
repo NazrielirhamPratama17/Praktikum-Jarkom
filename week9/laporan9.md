@@ -70,7 +70,7 @@ sys.exit()
 </head>
 <body>
     <h1>Hello World!</h1>
-    <p>Ini hasil server Python TCP</p>
+    <p>server Python TCP berhasil gais</p>
 </body>
 </html>
 ```
